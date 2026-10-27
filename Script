@@ -1,0 +1,52 @@
+// ---------- Settings: change these ----------
+const BUSINESS_EMAIL = "your-email@example.com"; // quote requests open in this inbox
+
+// ---------- Mobile menu ----------
+const toggle = document.querySelector(".nav-toggle");
+const nav = document.getElementById("nav");
+
+toggle.addEventListener("click", () => {
+  const isOpen = nav.classList.toggle("open");
+  toggle.setAttribute("aria-expanded", String(isOpen));
+});
+
+// Close the menu after tapping a link
+nav.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("open");
+    toggle.setAttribute("aria-expanded", "false");
+  });
+});
+
+// ---------- Footer year ----------
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// ---------- Quote form ----------
+// This opens the visitor's email app with the message filled in.
+// It works with no server. Later you can swap it for a service like Formspree.
+const form = document.getElementById("quote-form");
+const note = document.getElementById("form-note");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const data = new FormData(form);
+  const name = data.get("name").trim();
+  const address = data.get("address").trim();
+  const message = data.get("message").trim();
+
+  if (!name || !address) {
+    note.textContent = "Please enter your name and address.";
+    note.classList.add("error");
+    return;
+  }
+
+  const subject = encodeURIComponent("Quote request from " + name);
+  const body = encodeURIComponent(
+    "Name: " + name + "\nAddress: " + address + "\n\n" + message
+  );
+
+  note.classList.remove("error");
+  note.textContent = "Opening your email app to send the request.";
+  window.location.href = "mailto:" + BUSINESS_EMAIL + "?subject=" + subject + "&body=" + body;
+});
