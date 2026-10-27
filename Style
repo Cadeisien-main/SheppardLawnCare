@@ -1,0 +1,182 @@
+/* ---------- Colors and fonts: change these to restyle the whole site ---------- */
+:root {
+  --grass: #2f6b3a;
+  --grass-dark: #17351f;
+  --stripe-a: #3b7d45;
+  --stripe-b: #347239;
+  --mist: #edf3e8;
+  --sun: #f2b705;
+  --ink: #1b2a1f;
+  --white: #ffffff;
+
+  --font-head: "Bricolage Grotesque", "Trebuchet MS", Arial, sans-serif;
+  --font-body: "Source Sans 3", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--white);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-head);
+  line-height: 1.1;
+  margin: 0 0 0.6em;
+}
+h2 { font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 800; }
+h3 { font-size: 1.25rem; font-weight: 600; }
+
+a { color: var(--grass); }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--sun);
+  outline-offset: 2px;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0.8rem 1.25rem;
+  background: var(--grass-dark);
+}
+.brand {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--white);
+  text-decoration: none;
+}
+.nav { display: flex; gap: 1.25rem; align-items: center; }
+.nav a { color: var(--white); text-decoration: none; font-weight: 600; }
+.nav a:hover { color: var(--sun); }
+.nav .nav-cta {
+  background: var(--sun);
+  color: var(--grass-dark);
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+}
+.nav .nav-cta:hover { color: var(--grass-dark); background: #ffd043; }
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 2px solid var(--white);
+  color: var(--white);
+  font: inherit;
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ---------- Hero: mowing stripes ---------- */
+.hero {
+  background: repeating-linear-gradient(
+    90deg,
+    var(--stripe-a) 0 90px,
+    var(--stripe-b) 90px 180px
+  );
+  color: var(--white);
+  padding: clamp(4rem, 12vw, 8rem) 1.25rem;
+}
+.hero-inner { max-width: 720px; margin: 0 auto; }
+.hero h1 {
+  font-size: clamp(2.3rem, 7vw, 4rem);
+  font-weight: 800;
+}
+.hero p { font-size: 1.25rem; max-width: 52ch; }
+
+.btn {
+  display: inline-block;
+  background: var(--sun);
+  color: var(--grass-dark);
+  font: inherit;
+  font-weight: 600;
+  border: 0;
+  border-radius: 6px;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn:hover { background: #ffd043; }
+
+/* ---------- Sections ---------- */
+.section { padding: 4rem 1.25rem; }
+.section-alt { background: var(--mist); }
+.section > h2, .services, .reviews, .about, .contact {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+.services li { border-top: 4px solid var(--grass); padding-top: 1rem; }
+.services p { margin: 0; }
+
+.about p { max-width: 60ch; }
+
+.reviews { display: grid; gap: 1.5rem; }
+blockquote {
+  margin: 0;
+  padding-left: 1.25rem;
+  border-left: 4px solid var(--sun);
+}
+blockquote p { margin: 0 0 0.3rem; font-size: 1.2rem; }
+cite { font-style: normal; font-weight: 600; color: var(--grass); }
+
+/* ---------- Contact form ---------- */
+.contact { max-width: 560px; }
+form { display: grid; gap: 1rem; margin-top: 1.5rem; }
+label { display: grid; gap: 0.3rem; font-weight: 600; }
+input, textarea {
+  font: inherit;
+  padding: 0.7rem;
+  border: 2px solid #b9c7b4;
+  border-radius: 6px;
+  background: var(--white);
+}
+.form-note { margin: 0; min-height: 1.5em; font-weight: 600; }
+.form-note.error { color: #a32020; }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--grass-dark);
+  color: var(--white);
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+.site-footer p { margin: 0; }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 640px) {
+  .nav-toggle { display: block; }
+  .nav {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding-top: 1rem;
+  }
+  .nav.open { display: flex; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
