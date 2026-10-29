@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sheppard Lawn Care</title>
+  <title>Sheppard Lawn Care | Lawn Mowing in Quinton, VA</title>
   <meta name="description" content="Reliable, friendly lawn care in Quinton, VA. Mowing, edging, and cleanup.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
         <button>
@@ -31,8 +31,8 @@
     <!-- HERO: the striped background looks like a freshly mowed lawn -->
     <section class="hero">
       <div class="hero-inner">
-        <h1>PLACEHOLDER TEXT</h1>
-        <p>PLACEHOLDER TEXTPLACEHOLDER TEXTPLACEHOLDER TEXTPLACEHOLDER TEXT</p>
+        <h1>Clean lines. Fair prices. Your neighbor next door.</h1>
+        <p>Sheppard Lawn Care keeps yards in Quinton, VA looking sharp, with mowing you can count on every two weeks.</p>
         <a href="#contact" class="btn">Get a free quote</a>
       </div>
     </section>
@@ -56,14 +56,18 @@
           <h3>PLACEHOLDER TEXT</h3>
           <p>PLACEHOLDER TEXT</p>
         </li>
+        <li>
+          <h3>Leaf Removal</h3>
+          <p>One Time Leaf Removal Service or Included in Regular Mowing Package</p>
+        </li>
       </ul>
     </section>
 
     <section id="about" class="section section-alt">
       <div class="about">
-        <h2>PLACEHOLDER TEXT</h2>
-        <p>PLACEHOLDER TEXT</p>
-        <p><strong>Service area:</strong> PLACEHOLDER TEXT</p>
+        <h2>Local and reliable</h2>
+        <p>Hi, I'm Bradley Sheppard. I started Sheppard Lawn Care to keep Quinton, VA yards looking great. I show up on schedule, do the job right, and treat every lawn like it's my own.</p>
+        <p><strong>Service area:</strong> Quinton, VA and nearby areas.</p>
       </div>
     </section>
 
@@ -90,7 +94,7 @@
   </main>
 
   <footer class="site-footer">
-    <p>&copy; <span id="year"></span> Sheppard Lawn Care</p>
+    <p>&copy; <span id="year"></span> Sheppard Lawn Care. Quinton, VA</p>
   </footer>
 
   <script src="script.js"></script>
