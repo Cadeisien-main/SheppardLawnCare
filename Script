@@ -1,5 +1,5 @@
 // ---------- Settings: change these ----------
-const BUSINESS_EMAIL = "your-email@example.com"; // quote requests open in this inbox
+const BUSINESS_EMAIL = "irawxgameslol@gmail.com"; // quote requests open in this inbox
 
 // ---------- Mobile menu ----------
 const toggle = document.querySelector(".nav-toggle");
