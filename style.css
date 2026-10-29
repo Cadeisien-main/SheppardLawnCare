@@ -9,7 +9,7 @@
 /*BACKGROUND */
 
 Body {
-  background-image: url("jpeg444.jpg");
+  background-image: url("Lawn.jpg");
   position: fixed;
   top: 0;
   left: 0;
@@ -19,5 +19,5 @@ Body {
   background-position: center;
   background-attachment: fixed;
   z-index: -2;
-  filter: blur(0);
+  filter: blur(1);
 }
