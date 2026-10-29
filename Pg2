@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+             <title>Sheppard Lawn Care | Lawn Mowing in Quinton, VA</title>
+            <meta name="description" content="Reliable, friendly lawn care in Quinton, VA. Mowing, edging, and cleanup.">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="style.css">
+         </head>
+        <body>
+            <button>
+                <a href="Index">Main Page</a>
+            </button>
+            <header class="site-header">
+                <a href="#top" class="brand">Sheppard Lawn Care</a>
+                    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><!-- PLACEHOLDER TEXT --></button>
+                <nav class="nav" id="nav">
+                    <a href="#services"><!-- PLACEHOLDER TEXT --></a>
+                    <a href="#about"><!-- PLACEHOLDER TEXT --></a>
+                    <a href="#reviews"><!-- PLACEHOLDER TEXT --></a>
+                    <a href="#contact" class="nav-cta"><!-- PLACEHOLDER TEXT --></a>
+                </nav>
+            </header>
+        </body>
+    </html>
